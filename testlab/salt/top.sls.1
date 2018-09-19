@@ -3,12 +3,13 @@ base:
     - dnsmasq
   'apache*':
     - nginx
+  'salt-minion*':
+    - java8
+    - wazuh-elk
+    - wazuh-elk.logstash
+    - wazuh-elk.htpasswd
   'roles:common':
     - match: pillar
     - common
   'roles:wazuh-elk':
-    - match: pillar
     - wazuh-elk
-  'roles:java8':
-    - match: pillar
-    - java8

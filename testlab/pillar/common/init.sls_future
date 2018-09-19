@@ -1,0 +1,7 @@
+{% if grains['machine_roles'] is defined %}
+include:
+  - common_service.{{ grains['machine_role'][0] }}
+{% else %}}
+include:
+  - common.{{ grains['id'] }}
+{% endif %}

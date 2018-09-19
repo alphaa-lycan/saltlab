@@ -1,2 +1,4 @@
 include:
   - .elasticsearch
+  - .logstash
+  - .htpasswd
